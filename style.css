@@ -1,0 +1,110 @@
+body {
+
+    margin: 0;
+
+    background: black;
+
+    color: white;
+
+}
+
+.screen {
+
+    width: 100vw;
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+}
+
+@keyframes walk {
+
+    from {
+
+        background-position: 0px;
+
+    }
+
+    to {
+
+        background-position: -384px;
+
+    }
+
+}
+
+.cat {
+
+    width: 64px;
+
+    height: 64px;
+
+    background: url("assets/cat.png");
+
+    background-size: 384px 64px;
+
+    image-rendering: pixelated;
+
+    transform: scale(2);
+
+    animation: walk 1.2s steps(6) infinite;
+
+}
+
+@keyframes glow {
+
+    0% {
+
+        text-shadow: 0 0 10px cyan;
+
+    }
+
+    50% {
+
+        text-shadow: 0 0 30px cyan;
+
+    }
+
+    100% {
+
+        text-shadow: 0 0 10px cyan;
+
+    }
+
+}
+
+.title {
+
+    font-size: 64px;
+
+    color: cyan;
+
+    text-shadow: 0 0 20px cyan;
+
+    animation: glow 2s infinite;
+}
+
+.quest-button {
+
+    margin-top: 30px;
+
+    padding: 20px 40px;
+
+    font-size: 24px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: cyan;
+
+    cursor: pointer;
+
+}

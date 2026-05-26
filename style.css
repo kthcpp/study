@@ -198,3 +198,10 @@ body {
 
 }
 
+.chu {
+
+    image-rendering: pixelated;
+
+    transform: translateY(0px) scale(2);
+    
+}

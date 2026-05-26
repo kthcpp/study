@@ -6,17 +6,45 @@ button.onclick = function() {
 
 }
 
-let cat = document.querySelector(".cat")
+let stars = document.querySelector(".stars")
 
-let cattap = document.querySelector(".cattap")
+let colors = [
 
-cattap.onclick = function() {
+    "#FFFFFF",
+    "#CFFBFF",
+    "#FFE8A3",
+    "#A5B4FF"
 
-    cat.style.transform = "translateY(-50px)"
+]
 
-    setTimeout(function() {
+let sosao = Math.random()*50 + 50 
 
-        cat.style.transform = "translateY(0px)"
+for(let i = 0; i < sosao; i++) {
 
-    }, 300)
+    let star = document.createElement("div")
+
+    star.classList.add("star")
+
+    let size = Math.random() * 3 + 1
+
+    star.style.width = size + "px"
+
+    star.style.height = size + "px"
+
+    star.style.top = Math.random() * 100 + "%"
+
+    star.style.left = Math.random() * 100 + "%"
+
+    star.style.animationDelay =
+
+    Math.random() * 3 + "s, " +
+
+    Math.random() * 8 + "s"
+
+    star.style.background = colors[Math.floor(Math.random() * colors.length)]
+
+    star.style.boxShadow = "0 0 8px #CFFBFF"
+
+    stars.appendChild(star)
+
 }
